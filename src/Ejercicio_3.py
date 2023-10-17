@@ -8,9 +8,14 @@ def numImpares(numPos):
     return impares
 
 if __name__ == "__main__":
-    numPos = int(input("Escribe un número entero positivo: "))
-    if numPos <= 0:
-        print("Por favor, ingresa un número entero positivo.")
-    else:
-        impares = numImpares(numPos)
-        print(", ".join(map(str, impares)))
+    while True:
+        try:
+            numPos = int(input("Escribe un número entero positivo: "))
+            if numPos <= 0:
+                print("Por favor, ingresa un número entero positivo.")
+            else:
+                impares = numImpares(numPos)
+                print(", ".join(map(str, impares)))
+                break
+        except ValueError:
+            print("Por favor, ingresa un número entero positivo válido.")
