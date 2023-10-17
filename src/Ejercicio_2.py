@@ -2,8 +2,13 @@
 # (desde 1 hasta su edad).
 
 def aniosCumplidos(edad):
+    # Con isinstance verificamos que sea un número entero positivo.
+    if not isinstance(edad, int) or edad <= 0:
+        return "Edad no válida. Intente nuevamente."
+    numeros = ""
     for contador in range(1, edad + 1):
-        print(contador)
+        numeros += str(contador) + "\n"
+    return numeros.strip()  # Con strip eliminamos caracteres especiales
 
 if __name__ == "__main__":
     edad = input("Escriba su edad: ")
@@ -11,4 +16,5 @@ if __name__ == "__main__":
         print("Edad no válida. Intente nuevamente.")
         edad = input("Escriba su edad: ")
     edad = int(edad)
-    aniosCumplidos(edad)
+    resultado = aniosCumplidos(edad)
+    print(resultado)
