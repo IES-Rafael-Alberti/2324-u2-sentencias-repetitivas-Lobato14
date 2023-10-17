@@ -2,10 +2,8 @@
 
 def mostrar_palabra_10_veces(palabra):
     numero = 10
+    salida = ""
     while numero > 0:
-        print(palabra)
-        numero = numero - 1
-
-if __name__=="__main__":
-    palabra = input("Escribe una palabra: ")
-    mostrar_palabra_10_veces(palabra)
+        salida += palabra + "\n"
+        numero -= 1
+    return salida
