@@ -4,17 +4,16 @@
 
 def contar_atras(numPos):
     numPos = str(numPos)
-    resultado = ""
     while not numPos.isdigit() or int(numPos) <= 0:
-        print("Por favor, ingresa un número entero positivo.")
         numPos = input("Escribe un número entero positivo: ")
     numPos = int(numPos)
+    resultado = ""
     for numero in range(numPos, -1, -1):
         resultado += str(numero)
         if numero != 0:
             resultado += ", "
-    print(resultado)
+    return resultado
 
 if __name__ == "__main__":
     numPos = input("Escribe un número entero positivo: ")
-    contar_atras(numPos)
+    print(contar_atras(numPos))
