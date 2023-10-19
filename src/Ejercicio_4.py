@@ -15,5 +15,6 @@ def contar_atras(numPos):
     return resultado
 
 if __name__ == "__main__":
+    
     numPos = input("Escribe un número entero positivo: ")
     print(contar_atras(numPos))

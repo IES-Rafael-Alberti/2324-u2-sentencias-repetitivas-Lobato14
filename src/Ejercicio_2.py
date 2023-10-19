@@ -11,10 +11,13 @@ def aniosCumplidos(edad):
     return numeros.strip()  # Con strip eliminamos caracteres especiales
 
 if __name__ == "__main__":
+    # Entrada
     edad = input("Escriba su edad: ")
+    # Proceso
     while not edad.isdigit() or int(edad) <= 0:  
         print("Edad no válida. Intente nuevamente.")
         edad = input("Escriba su edad: ")
     edad = int(edad)
     resultado = aniosCumplidos(edad)
+    # Salida
     print(resultado)

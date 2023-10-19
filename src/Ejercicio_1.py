@@ -13,6 +13,9 @@ def mostrar_palabra_10_veces(palabra):
         return ""
     
 if __name__ == "__main__":
+    # Entrada
     palabra = input("Escribe una palabra o número: ")
+    # Proceso
     resultado = mostrar_palabra_10_veces(palabra)
+    # Salida
     print(resultado)

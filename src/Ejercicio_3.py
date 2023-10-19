@@ -15,7 +15,9 @@ if __name__ == "__main__":
     numPos = 0
     while numPos <= 0:
         try:
+            # Entrada
             numPos = int(input("Escribe un número entero positivo: "))
+            # Proceso
             if numPos <= 0:
                 print("Por favor, ingresa un número entero positivo.")
         except ValueError:
@@ -23,6 +25,8 @@ if __name__ == "__main__":
     
     impares = numImpares(numPos)
     if isinstance(impares, list):
+        # Salida
         print(", ".join(map(str, impares)))
     else:
+        # Salida
         print(impares)
