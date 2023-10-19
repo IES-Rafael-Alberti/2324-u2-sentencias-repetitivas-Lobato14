@@ -18,13 +18,14 @@ def tipoTriangulo(numInt):
     return triangulo
 
 if __name__ == "__main__":
-    while True:
+    numInt = 0
+    while numInt <= 0:
         try:
             numInt = int(input("Escribe un número entero positivo: "))
             if numInt <= 0:
-                raise ValueError("Debes ingresar un número entero positivo.")
-            resultado = tipoTriangulo(numInt)
-            print(resultado)
-            break
-        except ValueError as error:
-            print(f"Error: {error}. Intenta nuevamente.")
+                print("Debes ingresar un número entero positivo.")
+            else:
+                resultado = tipoTriangulo(numInt)
+                print(resultado)
+        except ValueError:
+            print("Debes ingresar un número entero válido. Intenta nuevamente.")
