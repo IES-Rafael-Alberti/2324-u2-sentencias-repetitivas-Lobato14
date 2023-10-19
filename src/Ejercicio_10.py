@@ -15,12 +15,11 @@ def es_primo(numero):
         return "Error: Debes ingresar un número entero positivo mayor que 1."
 
 if __name__ == "__main__":
-    while True:
+    numero = 0
+    while numero <= 1:
         try:
             numero = int(input("Introduce un número entero positivo mayor que 1: "))
             resultado = es_primo(numero)
             print(resultado)
-            if resultado != "Error: Debes ingresar un número entero positivo mayor que 1.":
-                break
         except ValueError:
             print("Error: Debes ingresar un número entero válido. Inténtalo de nuevo.")
