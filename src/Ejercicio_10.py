@@ -2,26 +2,25 @@
 # pantalla si es un número primo o no.
 
 def es_primo(numero):
-    if numero <= 1:
-        return False
-    divisor = 2
-    while divisor <= numero ** 0.5:
-        if numero % divisor == 0:
-            return False
-        divisor += 1
-    return True
+    if isinstance(numero, int):
+        if numero <= 1:
+            return "Error: Debes ingresar un número entero positivo mayor que 1."
+        divisor = 2
+        while divisor <= numero ** 0.5:
+            if numero % divisor == 0:
+                return f"{numero} no es un número primo."
+            divisor += 1
+        return f"{numero} es un número primo."
+    else:
+        return "Error: Debes ingresar un número entero positivo mayor que 1."
 
 if __name__ == "__main__":
     while True:
         try:
             numero = int(input("Introduce un número entero positivo mayor que 1: "))
-            if numero <= 1:
-                print("Error: Debes ingresar un número entero positivo mayor que 1.")
-            else:
-                if es_primo(numero):
-                    print(numero, "es un número primo.")
-                else:
-                    print(numero, "no es un número primo.")
-                break  # Salir del bucle si la entrada es válida
+            resultado = es_primo(numero)
+            print(resultado)
+            if resultado != "Error: Debes ingresar un número entero positivo mayor que 1.":
+                break  # Salir del bucle si la entrada es válida y no hay error
         except ValueError:
             print("Error: Debes ingresar un número entero válido. Inténtalo de nuevo.")
