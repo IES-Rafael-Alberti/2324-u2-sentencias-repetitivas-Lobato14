@@ -2,16 +2,17 @@
 # una a una las letras de la palabra introducida empezando por la última.
 
 def palabraReves(palabra):
-    while palabra == "":
+    while not (palabra and palabra.isalpha()):
         palabra = input("Por favor, escribe una palabra: ")
+    palabra_invertida = ""
     for letra in range(len(palabra) - 1, -1, -1):
-        print(palabra[letra])
-    return palabra
+        palabra_invertida += palabra[letra]
+    return "Palabra invertida: " + palabra_invertida
 
 if __name__ == "__main__":
     # Entrada
     palabra = input("Escribe una palabra: ")
     # Proceso
-    resultado = palabraReves(palabra)
+    palabra_invertida = palabraReves(palabra)
     # Salida
-    print(resultado)
+    print(palabra_invertida)
