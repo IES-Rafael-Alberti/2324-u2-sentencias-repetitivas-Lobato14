@@ -13,9 +13,12 @@ def calcular_inversion(cantidadInv, interesAnual, numAnios):
     return resultados
 
 if __name__ == "__main__":
+    # Entrada
     cantidadInv = float(input("Escribe la cantidad a invertir: "))
     interesAnual = float(input("Escribe el interés anual en porcentaje: "))
     numAnios = int(input("Escribe el número de años: "))
+    # Proceso
     resultados = calcular_inversion(cantidadInv, interesAnual, numAnios)
     for resultado in resultados:
+        # Salida
         print(" ".join(str(elemento) for elemento in resultado))

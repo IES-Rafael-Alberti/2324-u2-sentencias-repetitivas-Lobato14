@@ -21,11 +21,17 @@ if __name__ == "__main__":
     numInt = 0
     while numInt <= 0:
         try:
+            # Entrada
             numInt = int(input("Escribe un número entero positivo: "))
+            # Proceso
             if numInt <= 0:
+                # Salida 1
                 print("Debes ingresar un número entero positivo.")
             else:
+                # Proceso 2
                 resultado = tipoTriangulo(numInt)
+                # Salida 2
                 print(resultado)
         except ValueError:
+            # Salida 3
             print("Debes ingresar un número entero válido. Intenta nuevamente.")

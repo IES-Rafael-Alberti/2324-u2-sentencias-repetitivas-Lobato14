@@ -22,10 +22,15 @@ if __name__ == "__main__":
     numEnt = 0
     while numEnt <= 0:
         try:
+            # Entrada
             numEnt = int(input("Escribe un número entero mayor que 0: "))
+            # Proceso
             if numEnt <= 0:
+                # Salida 1
                 print("Debes ingresar un número entero positivo.")
             else:
+                # Salida 2
                 print(triangulo_rectangulo(numEnt))
         except ValueError:
+            # Salida 3
             print("Debes ingresar un número entero válido. Intenta nuevamente.")

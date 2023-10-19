@@ -16,10 +16,15 @@ def es_primo(numero):
 
 if __name__ == "__main__":
     numero = 0
+    # Proceso 1
     while numero <= 1:
         try:
+            # Entrada
             numero = int(input("Introduce un número entero positivo mayor que 1: "))
+            # Proceso 2
             resultado = es_primo(numero)
+            # Salida 1
             print(resultado)
         except ValueError:
+            # Salida 1
             print("Error: Debes ingresar un número entero válido. Inténtalo de nuevo.")

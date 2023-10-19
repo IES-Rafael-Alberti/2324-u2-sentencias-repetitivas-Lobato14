@@ -9,4 +9,5 @@ def tablaDeMultiplicar():
     return tabla
 
 if __name__ == "__main__":
+    # Salida
     print(tablaDeMultiplicar())
