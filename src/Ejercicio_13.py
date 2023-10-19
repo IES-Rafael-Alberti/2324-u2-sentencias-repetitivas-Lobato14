@@ -9,7 +9,7 @@ def ecoUsuario(palabraclave):
 
 if __name__ == "__main__":
     # Entrada
-    palabraclave = "salir"
+    palabraclave = "Salir"
     # Proceso
     mensaje = ecoUsuario(palabraclave)
     # Salida
