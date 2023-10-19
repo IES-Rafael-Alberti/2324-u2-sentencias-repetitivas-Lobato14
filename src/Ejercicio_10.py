@@ -21,6 +21,6 @@ if __name__ == "__main__":
             resultado = es_primo(numero)
             print(resultado)
             if resultado != "Error: Debes ingresar un número entero positivo mayor que 1.":
-                break  # Salir del bucle si la entrada es válida y no hay error
+                break
         except ValueError:
             print("Error: Debes ingresar un número entero válido. Inténtalo de nuevo.")
