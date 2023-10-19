@@ -19,12 +19,13 @@ def triangulo_rectangulo(numEnt):
     return resultado
 
 if __name__ == "__main__":
-    while True:
+    numEnt = 0
+    while numEnt <= 0:
         try:
             numEnt = int(input("Escribe un número entero mayor que 0: "))
             if numEnt <= 0:
-                raise ValueError("Debes ingresar un número entero positivo.")
-            print(triangulo_rectangulo(numEnt))
-            break
-        except ValueError as error:
-            print(f"Error: {error}. Intenta nuevamente.")
+                print("Debes ingresar un número entero positivo.")
+            else:
+                print(triangulo_rectangulo(numEnt))
+        except ValueError:
+            print("Debes ingresar un número entero válido. Intenta nuevamente.")
