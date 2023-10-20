@@ -2,12 +2,12 @@
 # Informar cuál fue el mayor número ingresado.
 
 def obtener_mayor_numero(listaNumeros: list) -> str:
-    numeros_positivos = [int(numero) for numero in listaNumeros if numero.isdigit() and int(numero) > 0]
+    numeros_positivos = [numero for numero in listaNumeros if numero > 0]
     if numeros_positivos:
         maximoNumero = max(numeros_positivos)
         return "El mayor número ingresado es: " + str(maximoNumero)
     else:
-        return "Error, debe ser un número mayor a 0."
+        return "No se ingresaron números positivos."
 
 if __name__ == "__main__":
     # Entrada
