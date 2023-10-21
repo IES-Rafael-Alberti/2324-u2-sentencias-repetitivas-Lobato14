@@ -39,8 +39,9 @@ def leer_numeros():
     return numeros_pares, numeros_impares, digitos_pares, digitos_impares
 
 if __name__ == "__main__":
+    # Entrada y Proceso
     numeros_pares, numeros_impares, digitos_pares, digitos_impares = leer_numeros()
-    
+    # Salida
     print("Cantidad total de números pares leídos:", numeros_pares)
     print("Cantidad total de números impares leídos:", numeros_impares)
     print("Cantidad total de dígitos pares leídos:", digitos_pares)
