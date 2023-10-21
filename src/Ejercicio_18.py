@@ -22,12 +22,15 @@ def contar_numeros_pares(numeros):
     return count
 
 if __name__ == "__main__":
+    # Entrada 
     numeros_pares = 0
     numeros_ingresados = []
     numero_str = input("Ingrese un número entero positivo (-1 para salir): ")
+    # Proceso
     while numero_str != "-1":
         if numero_str.isdigit():
             suma = suma_digitos(numero_str)
+            # Salida 1.1
             print("La suma de los dígitos es:", suma)
             if isinstance(suma, int):
                 numero = int(numero_str)
@@ -35,8 +38,12 @@ if __name__ == "__main__":
                 if numero % 2 == 0:
                     numeros_pares += 1
             else:
+                # Salida 1.2
                 print(suma)
         else:
+            # Salida 2
             print("Error, por favor ingrese un número entero válido.")
+        # Entrada 2
         numero_str = input("Ingrese un número entero positivo (-1 para salir): ")
+    # Salida
     print("Cantidad de números pares ingresados:", contar_numeros_pares(numeros_ingresados))
