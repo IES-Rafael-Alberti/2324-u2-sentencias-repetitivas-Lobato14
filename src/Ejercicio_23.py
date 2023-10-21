@@ -21,18 +21,23 @@ def contar_digitos_numericos(cadena):
     return sum(c.isdigit() for c in cadena)
 
 if __name__ == "__main__":
+    # Entrada
     lineas_completas = 0
     digitos_totales = 0
     linea_actual = ""
     titulo = ""
+    # Procesamiento
     while titulo != "*":
-        titulo = input("Libro: ")  
+        titulo = input("Libro: ")
+        # Procesamiento 2
         if titulo == "/":
             digitos_en_linea = contar_digitos_numericos(linea_actual)
+            # Salida 1
             print(f"Línea completa. Aparecen {digitos_en_linea} dígitos numéricos.")
             digitos_totales += digitos_en_linea
             lineas_completas += 1
             linea_actual = ""
         else:
             linea_actual += titulo
+    # Salida 2
     print(f"Fin. Se leyeron {lineas_completas} líneas completas en total.")
