@@ -31,12 +31,19 @@ def comprobar_opciones(opciones_elegir):
         return "Opción no válida. Por favor, seleccione una opción del 1 al 3."
 
 if __name__ == "__main__":
+    # Entrada
     opciones_elegir = 0
+    # Proceso
     while opciones_elegir != 3:
+        # Salida 1
         print(mostrar_menu())
+        # Entrada 2
         entrada_user = input("Seleccione una de las opciones anteriores: ")
+        # Proceso 2
         if entrada_user.isdigit():
             opciones_elegir = int(entrada_user)
+            # Salida 2
             print(comprobar_opciones(opciones_elegir))
         else:
+            # Salida 3
             print("Por favor, ingrese un número válido.")
